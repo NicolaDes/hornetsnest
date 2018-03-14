@@ -1,4 +1,3 @@
-
 #include <cuda.h>
 #include <cuda_runtime.h>
 
@@ -302,12 +301,10 @@ void devicecuStaticTriangleCounting(HornetDevice hornet,
             vid_t        large = sourceSmaller ? dest : src;
             degree_t    small_len = sourceSmaller ? srcLen : destLen;
             degree_t    large_len = sourceSmaller ? destLen : srcLen;
-
             /*
             if(large_len + small_len > cutoff)
                 continue;
             */
-
             const vid_t* small_ptr = hornet.vertex(small).neighbor_ptr();
             const vid_t* large_ptr = hornet.vertex(large).neighbor_ptr();
 
@@ -445,4 +442,3 @@ triangle_t TriangleCounting::countTriangles(){
     return sum;
 }
 } // namespace hornets_nest
-

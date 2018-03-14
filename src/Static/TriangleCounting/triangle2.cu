@@ -1,4 +1,3 @@
-
 #include <cuda.h>
 #include <cuda_runtime.h>
 
@@ -23,7 +22,6 @@ struct OPERATOR_InitTriangleCounts {
         d_triPerVertex[vertex.id()] = 0;
     }
 };
-
 /*
  * Naive intersection operator
  * Assumption: access to entire adjacencies of v1 and v2 required
